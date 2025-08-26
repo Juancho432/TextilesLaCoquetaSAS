@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Windows.Forms;
 using CapaNegocio;
 
@@ -8,7 +6,6 @@ namespace CapaPresentacion
 {
     public partial class frmListado : Form
     {
-
         CN_Empleados objCN = new CN_Empleados();
 
         public frmListado()

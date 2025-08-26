@@ -24,16 +24,15 @@ namespace CapaNegocio
             objCD.RegistrarEmpleado(empleado);
         }
 
-        public List<object> BuscarEmpleados(string codigo)
+        public List<object> BuscarEmpleado(string codigo)
         {
             List<object> listaEmpleados = new List<object>();
-            foreach (var empleado in objCD.BuscarEmpleado(codigo))
+            List<Empleado> data = objCD.BuscarEmpleado(codigo);
+            if (data.Count > 0)
             {
-                listaEmpleados.Add(empleado);
+                listaEmpleados.Add(data[0]);
             }
-
             return listaEmpleados;
-
         }
 
         public List<object> ListarEmpleados()
