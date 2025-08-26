@@ -31,7 +31,7 @@ namespace CapaDatos
         }
 
         //Metodo para buscar empleado por ID
-        public List<Empleado> BuscarCliente(string codigo)
+        public List<Empleado> BuscarEmpleado(string codigo)
         {
             var lista = new List<Empleado>();
 
