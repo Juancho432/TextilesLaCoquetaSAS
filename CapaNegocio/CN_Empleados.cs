@@ -1,9 +1,5 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using CapaDatos;
 
 namespace CapaNegocio
@@ -11,7 +7,7 @@ namespace CapaNegocio
     public class CN_Empleados
     {
         //Instanciar un objeto de la clase CD_Cliente
-        private CD_Empleado objCD = new CD_Empleado();
+        private readonly CD_Empleado objCD = new CD_Empleado();
 
         //Invocar los metodos
         public void RegistrarEmpleado(string codigo, string nombre, string apellido, string edad, string cargo, string salario_base)

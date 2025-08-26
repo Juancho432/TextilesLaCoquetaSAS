@@ -56,5 +56,10 @@ namespace CapaPresentacion
             nomina.MdiParent = this;
             nomina.Show();
         }
+
+        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

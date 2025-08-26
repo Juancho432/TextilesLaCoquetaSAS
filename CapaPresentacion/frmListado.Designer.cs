@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button_Listado = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dvg_Listado = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dvg_Listado)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,28 +52,33 @@
             this.button_Listado.TabIndex = 1;
             this.button_Listado.Text = "Listar";
             this.button_Listado.UseVisualStyleBackColor = true;
+            this.button_Listado.Click += new System.EventHandler(this.Button_Listado_Click);
             // 
-            // dataGridView1
+            // dvg_Listado
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(95, 94);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(630, 266);
-            this.dataGridView1.TabIndex = 2;
+            this.dvg_Listado.AllowUserToAddRows = false;
+            this.dvg_Listado.AllowUserToDeleteRows = false;
+            this.dvg_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvg_Listado.Location = new System.Drawing.Point(95, 94);
+            this.dvg_Listado.Name = "dvg_Listado";
+            this.dvg_Listado.ReadOnly = true;
+            this.dvg_Listado.RowHeadersVisible = false;
+            this.dvg_Listado.RowHeadersWidth = 51;
+            this.dvg_Listado.RowTemplate.Height = 24;
+            this.dvg_Listado.Size = new System.Drawing.Size(630, 266);
+            this.dvg_Listado.TabIndex = 2;
             // 
             // frmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvg_Listado);
             this.Controls.Add(this.button_Listado);
             this.Controls.Add(this.label1);
             this.Name = "frmListado";
             this.Text = "frmListado";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvg_Listado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +88,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_Listado;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvg_Listado;
     }
 }
