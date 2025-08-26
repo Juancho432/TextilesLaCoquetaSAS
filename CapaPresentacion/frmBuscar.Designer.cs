@@ -41,6 +41,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.button_Buscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -163,17 +164,27 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.Location = new System.Drawing.Point(391, 213);
+            this.label11.Location = new System.Drawing.Point(553, 300);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(19, 25);
             this.label11.TabIndex = 18;
             this.label11.Text = "-";
+            // 
+            // button_Buscar
+            // 
+            this.button_Buscar.Location = new System.Drawing.Point(296, 372);
+            this.button_Buscar.Name = "button_Buscar";
+            this.button_Buscar.Size = new System.Drawing.Size(211, 60);
+            this.button_Buscar.TabIndex = 19;
+            this.button_Buscar.Text = "BÚSCAR";
+            this.button_Buscar.UseVisualStyleBackColor = true;
             // 
             // frmBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Buscar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -209,5 +220,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button_Buscar;
     }
 }

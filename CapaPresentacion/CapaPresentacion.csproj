@@ -46,11 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscar.Designer.cs">
+      <DependentUpon>frmBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListado.Designer.cs">
+      <DependentUpon>frmListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNomina.Designer.cs">
+      <DependentUpon>frmNomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalario.Designer.cs">
+      <DependentUpon>frmSalario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
@@ -60,6 +90,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBuscar.resx">
+      <DependentUpon>frmBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListado.resx">
+      <DependentUpon>frmListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>

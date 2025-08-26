@@ -76,12 +76,14 @@
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.registrarToolStripMenuItem.Text = "&Registrar Empleado";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // buscarEmpleadoToolStripMenuItem
             // 
             this.buscarEmpleadoToolStripMenuItem.Name = "buscarEmpleadoToolStripMenuItem";
             this.buscarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.buscarEmpleadoToolStripMenuItem.Text = "&Buscar Empleado";
+            this.buscarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.buscarEmpleadoToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -91,8 +93,9 @@
             // listadoDeClientesToolStripMenuItem
             // 
             this.listadoDeClientesToolStripMenuItem.Name = "listadoDeClientesToolStripMenuItem";
-            this.listadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.listadoDeClientesToolStripMenuItem.Text = "&Listado de Clientes";
+            this.listadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.listadoDeClientesToolStripMenuItem.Text = "&Listado de Empleados";
+            this.listadoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoDeClientesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -102,8 +105,9 @@
             // calcuToolStripMenuItem
             // 
             this.calcuToolStripMenuItem.Name = "calcuToolStripMenuItem";
-            this.calcuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.calcuToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.calcuToolStripMenuItem.Text = "&Calcular Salario";
+            this.calcuToolStripMenuItem.Click += new System.EventHandler(this.calcuToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -113,8 +117,9 @@
             // nominaToolStripMenuItem
             // 
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
-            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.nominaToolStripMenuItem.Text = "&Nomina";
+            this.nominaToolStripMenuItem.Click += new System.EventHandler(this.nominaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -126,6 +131,7 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirToolStripMenuItem.Text = "&Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
