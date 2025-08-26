@@ -26,5 +26,24 @@ namespace CapaDatos
             Cargo = cargo;
             Salario_base = salario_base;
         }
-    }
+
+        //Metodo para convertir los atributos en una linea de texto
+
+        public string LineaArchivo()
+        {
+            return $"{Codigo},{Nombre},{Apellido},{Edad},{Cargo},{Salario_base} ";
+        }
+
+        //Metodo para separar los datos del archivo
+        public Empleado SepararLinea(string linea)
+        {
+            var datos = linea.Split(',');
+            return new Empleado(
+                datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]
+                );
+
+        }
+
+
+    }//clase
 }
