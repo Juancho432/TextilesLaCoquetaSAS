@@ -39,7 +39,7 @@
             this.lbl_apellido_empleado = new System.Windows.Forms.Label();
             this.lbl_cargo = new System.Windows.Forms.Label();
             this.lbl_salario_base = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_calcular = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -157,15 +157,16 @@
             this.lbl_salario_base.TabIndex = 10;
             this.lbl_salario_base.Text = "--";
             // 
-            // button1
+            // btn_calcular
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(342, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 39);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Calcular salario neto";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_calcular.Location = new System.Drawing.Point(342, 289);
+            this.btn_calcular.Name = "btn_calcular";
+            this.btn_calcular.Size = new System.Drawing.Size(183, 39);
+            this.btn_calcular.TabIndex = 11;
+            this.btn_calcular.Text = "Calcular salario neto";
+            this.btn_calcular.UseVisualStyleBackColor = true;
+            this.btn_calcular.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // label7
             // 
@@ -260,7 +261,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_calcular);
             this.Controls.Add(this.lbl_salario_base);
             this.Controls.Add(this.lbl_cargo);
             this.Controls.Add(this.lbl_apellido_empleado);
@@ -292,7 +293,7 @@
         private System.Windows.Forms.Label lbl_apellido_empleado;
         private System.Windows.Forms.Label lbl_cargo;
         private System.Windows.Forms.Label lbl_salario_base;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_calcular;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
