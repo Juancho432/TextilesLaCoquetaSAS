@@ -1,27 +1,27 @@
 ﻿
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
 using CapaDatos;
 
 namespace CapaNegocio
 {
+    public struct SalarioDTA
+    {
+        public string Codigo;
+        public string Nombre;
+        public string Apellido;
+        public string Cargo;
+        public double SalarioBase;
+        public double Salud;
+        public double Pension;
+        public double Transporte;
+        public double SalarioNeto;
+    }
+
     public class CN_Empleados
     {
         //Instanciar un objeto de la clase CD_Cliente
         private readonly CD_Empleado objCD = new CD_Empleado();
         private readonly double SalarioMinimo = 2847000;
-
-        public struct SalarioDTA
-        {
-            public string Nombre;
-            public string Apellido;
-            public string Cargo;
-            public double SalarioBase;
-            public double Salud;
-            public double Pension;
-            public double Transporte;
-            public double SalarioNeto;
-        }
 
         //Invocar los metodos
         public void RegistrarEmpleado(string codigo, string nombre, string apellido, 
@@ -73,6 +73,7 @@ namespace CapaNegocio
                 double salario_neto = salario_base - salud - pension + transporte;
                 return new SalarioDTA() 
                 {
+                    Codigo = empleado.Codigo,
                     Nombre = empleado.Nombre,
                     Apellido = empleado.Apellido,
                     Cargo = empleado.Cargo,
@@ -87,6 +88,23 @@ namespace CapaNegocio
             {
                 return null;
             }
+        }
+    
+        public List<SalarioDTA> ObtenerNomina()
+        {
+            List<SalarioDTA> salarios = new List<SalarioDTA>();
+            List<Empleado> listado = objCD.ListarEmpleados();
+            if (listado.Count < 1)
+            {
+                return salarios;
+            }
+
+            foreach (Empleado item in listado)
+            {
+                salarios.Add((SalarioDTA)CalcularSalario(item.Codigo));
+            }
+
+            return salarios;
         }
     }
 }

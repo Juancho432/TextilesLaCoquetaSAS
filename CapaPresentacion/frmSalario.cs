@@ -16,8 +16,8 @@ namespace CapaPresentacion
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            CN_Empleados.SalarioDTA? busqueda = objCN.CalcularSalario(txt_codigo.Text);
-            if (busqueda is CN_Empleados.SalarioDTA data)
+            SalarioDTA? busqueda = objCN.CalcularSalario(txt_codigo.Text);
+            if (busqueda is SalarioDTA data)
             {
                 lbl_nombre_empleado.Text = data.Nombre;
                 lbl_apellido_empleado.Text = data.Apellido;

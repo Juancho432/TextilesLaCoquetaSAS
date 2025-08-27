@@ -121,6 +121,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\CapaNegocio.CN_Empleados+SalarioDTA.datasource" />
+    <None Include="Properties\DataSources\CapaNegocio.SalarioDTA.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
