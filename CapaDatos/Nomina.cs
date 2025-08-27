@@ -27,12 +27,6 @@ namespace CapaDatos
             Apellido = empleado.Apellido;
             Cargo = empleado.Cargo;
             SalarioBase = double.Parse(empleado.Salario_base);
-
-            // Reglas de negocio
-            Salud = SalarioBase * 0.04;
-            Pension = SalarioBase * 0.04;
-            Auxilio = (SalarioBase < (2 * 1300000)) ? 200000 : 0; // suponiendo salario mínimo = 1,300,000
-            Neto = SalarioBase - Salud - Pension + Auxilio;
         }
 
         // Convierte en línea para archivo plano

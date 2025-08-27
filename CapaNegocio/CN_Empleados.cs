@@ -20,7 +20,8 @@ namespace CapaNegocio
     public class CN_Empleados
     {
         //Instanciar un objeto de la clase CD_Cliente
-        private readonly CD_Empleado objCD = new CD_Empleado();
+        private readonly CD_Empleado objCDEmp = new CD_Empleado();
+        private readonly CD_Nomina objCDNom = new CD_Nomina();
         private readonly double SalarioMinimo = 2847000;
 
         //Invocar los metodos
@@ -36,13 +37,13 @@ namespace CapaNegocio
                 Cargo = cargo,
                 Salario_base = salario_base
             };
-            objCD.RegistrarEmpleado(empleado);
+            objCDEmp.RegistrarEmpleado(empleado);
         }
 
         public List<object> BuscarEmpleado(string codigo)
         {
             List<object> listaEmpleados = new List<object>();
-            List<Empleado> data = objCD.BuscarEmpleado(codigo);
+            List<Empleado> data = objCDEmp.BuscarEmpleado(codigo);
             if (data.Count > 0)
             {
                 listaEmpleados.Add(data[0]);
@@ -53,7 +54,7 @@ namespace CapaNegocio
         public List<object> ListarEmpleados()
         {
             List<object> listaEmpleados = new List<object>();
-            foreach (var empleado in objCD.ListarEmpleados())
+            foreach (var empleado in objCDEmp.ListarEmpleados())
             {
                 listaEmpleados.Add((empleado));
             }
@@ -62,7 +63,7 @@ namespace CapaNegocio
     
         public SalarioDTA? CalcularSalario(string codigo)
         {
-            List<Empleado> data = objCD.BuscarEmpleado(codigo);
+            List<Empleado> data = objCDEmp.BuscarEmpleado(codigo);
             if (data.Count > 0)
             {
                 Empleado empleado = data[0];
@@ -71,6 +72,16 @@ namespace CapaNegocio
                 double pension = salario_base * 0.04;
                 double transporte = (salario_base < SalarioMinimo) ? 200000 : 0;
                 double salario_neto = salario_base - salud - pension + transporte;
+                Nomina nomina = new Nomina(empleado) 
+                {
+                    Salud = salud,
+                    Pension = pension,
+                    Auxilio = transporte,
+                    Neto = salario_neto
+                };
+
+                objCDNom.GuardarNomina(nomina);
+
                 return new SalarioDTA() 
                 {
                     Codigo = empleado.Codigo,
@@ -92,19 +103,32 @@ namespace CapaNegocio
     
         public List<SalarioDTA> ObtenerNomina()
         {
+
+            List<Nomina> listado = objCDNom.ListarNomina();
             List<SalarioDTA> salarios = new List<SalarioDTA>();
-            List<Empleado> listado = objCD.ListarEmpleados();
             if (listado.Count < 1)
             {
                 return salarios;
             }
 
-            foreach (Empleado item in listado)
+            foreach (Nomina item in listado)
             {
-                salarios.Add((SalarioDTA)CalcularSalario(item.Codigo));
+                salarios.Add(new SalarioDTA 
+                {
+                    Codigo = item.Codigo,
+                    Nombre = item.Nombre,
+                    Apellido = item.Apellido,
+                    Cargo = item.Cargo,
+                    SalarioBase = item.SalarioBase,
+                    Salud = item.Salud,
+                    Pension = item.Pension,
+                    Transporte = item.Auxilio,
+                    SalarioNeto = item.Neto
+                });
             }
 
             return salarios;
+
         }
     }
 }
