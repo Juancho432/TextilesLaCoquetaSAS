@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CD_Empleado.cs" />
+    <Compile Include="CD_Nomina.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="Nomina.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
